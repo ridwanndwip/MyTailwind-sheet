@@ -4,9 +4,16 @@ module.exports = {
     content: ["./public/**/*.{html,js}"],
     theme: {
       extend: {
+      borderWidth:{
+        lineWidth:'1px'
+      },
       colors:{
-        line:'#232C3E',
-        text:'#16FF00',
+        color1:'#003C43',
+        color2:'#135D66',
+        color3:'#77B0AA',
+        color4:'#E3FEF7',
+        lineColor:'#232C3E',
+        // text:'#16FF00',
       },
       backgroundImage: {
             'hero-pattern':
