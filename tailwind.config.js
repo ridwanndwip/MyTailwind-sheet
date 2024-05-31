@@ -4,8 +4,14 @@ module.exports = {
     content: ["./public/**/*.{html,js}"],
     theme: {
       extend: {
+        fontFamily: {
+          'Poppins': ['Poppins', 'sans-serif',]
+        },
       borderWidth:{
         lineWidth:'1px'
+      },
+      letterSpacing: {
+        Lspace: '1.5px'
       },
       colors:{
         color1:'#003C43',
