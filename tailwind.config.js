@@ -18,7 +18,7 @@ module.exports = {
         color2:'#135D66',
         color3:'#77B0AA',
         color4:'#E3FEF7',
-        lineColor:'#232C3E',
+        // lineColor:'#232C3E',
         // text:'#16FF00',
       },
       backgroundImage: {
