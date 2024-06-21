@@ -11,7 +11,11 @@ module.exports = {
         lineWidth:'1px'
       },
       letterSpacing: {
-        Lspace: '1.5px'
+        Lspace1: '1px',
+        Lspace2: '1.5px'
+      },
+      lineHeight: {
+        LH :'18px',
       },
       colors:{
         color1:'#003C43',

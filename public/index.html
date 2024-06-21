@@ -13,13 +13,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
 
 </head>
-<body class="font-Poppins bg-gradient-to-r from-color1 to-color2 w-screen h-screen tracking-Lspace">
+<body class="font-Poppins bg-gradient-to-r from-color1 to-color2 w-screen h-screen">
 
     <!-- Navbar -->
-    <nav class="flex flex-row justify-between self-center items-center m-auto shadow-sm pt-5 px-4 pb-3 gap-5">
+    <nav class="flex flex-row justify-between self-center items-center m-auto pt-5 px-4 pb-3 gap-5">
         <div class="flex flex-row items-center justify-center border-b-lineWidth border-color2">
             <!-- Box Search -->
-            <input class="placeholder:text-color4 placeholder:italic placeholder:text-xs placeholder:font-normal placeholder:font-thin block bg-transparent w-full focus:outline-none focus:border-none focus:bg-transparent block pb-2 px-2" placeholder="Search" type="text" name="search"/>
+            <input class="placeholder:text-color4 placeholder:italic placeholder:text-xs placeholder:font-normal placeholder:font-thin block bg-transparent w-full focus:outline-none focus:border-none focus:bg-transparent block pb-2 px-2" placeholder="Pencarian" type="text" name="search"/>
             <!-- Search Button -->
             <!-- <span class="flex justify-center items-center "> -->
                 <!-- <svg width="18px" height="18px" viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -39,20 +39,121 @@
                     </g>
                 </g>
             </svg>
-        </div>
+    </div>
     </nav>
     
     <!-- Hero Section -->
     <div class="hero">
-        <span class="block text-center mt-14 mx-4 text-xl font-semibold text-color4 tracking-Lspace"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, aliquam.</span>
-        <span class="block tracking-Lspace text-xs text-center  text-color4 mt-3 mx-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, nemo.</span>
+        <span class="block text-center mt-10 mx-4 text-xl font-semibold text-color4 tracking-Lspace2"> Selamat datang di Dokumentasi TailwindCSS Personal Versi Indonesia</span>
+        <span class="block tracking-Lspace2 text-xs text-center  text-color4 mt-3 mx-4"><span class="text-red-300"><strong>'Dokumentasi ini tidak lengkap!'</strong><br>Cek dokumentasi lengkapnya di <a href="https://tailwindcss.com/" target="_blank"><u>tailwindcss.com</u></a></span></span>
     </div>
+    
 
+    <!-- Title -->
+    <h2 class="text-color4 font-light text-lg block text-center mt-10 tracking-normal">Cara Install TailwindCSS</h2>
     <!-- content -->
-    <div class="card pt-3 pl-4 bg-color4 mt-14">
-        <h1 class="block text-color1 font-semibold text-xs"> U+F108 Installation</h1>
-        
+    <div class="card bg-color4 mt-3 w-11/12 mx-auto rounded-md px-5 py-5">
+        <span class="block font-semibold text-color1 text-sm">
+        Install menggunakan Tailwind-CLI
+        </span>
+        <ul class="list-disc block ml-4 mt-2 font-normal text-color1 text-xs">
+            <li class="leading-LH">Buka terminal dan tulis perintah <br> <span class="font-bold underline-offset-auto block">npm install -D tailwindcss postcss autoprefixer</span> (install tailwind, postcss, autoprefixer via npm. -D adalah dependencies) </li>
+            <br>
+
+            <li class="leading-lh">Masih di terminal, dan tulis perintah<br> <span class="font-bold underline-offset-1">npm tailwindcss init</span> (digunakan untuk membuat file konfigurasi default untuk Tailwind CSS di proyek Anda, file tersebut bernama <u>tailwind.config.js</u>) </li>
+            <br>
+
+            <li class="leading-lh">Buatlah file input.css, dan tambahkan kode berikut :
+            <span class="block my-2 font-bold">
+                @tailwind base;<br>
+                @tailwind components;<br>
+                @tailwind utilities;<br>
+            </span>
+            </li>
+            <br>
+
+            <li class="leading-lh">Buka terminal kembali, dan tulis perintah<br> <span class="font-bold underline-offset-1"><u>npx tailwindcss -i ./src/input.css -o ./src/output.css --watch</u></span><br>perintah diatas digunakan untuk membuat live reload/live change pada tailwindcss.</li>
+            <br>
+
+            <li class="leading-lh">Setup menggunakan Tailwind CLI sudah berhasil, sekarang Anda compile output.css Anda ke HTML dan siap digunakan<span class="font-bold mt-1 block"><u>&lt;link href="./output.css" rel="stylesheet"&gt;</u></span>
+            </li>
+            <br>
+        </ul>
+
+        <span class="block font-semibold text-color1 text-sm">
+        Menggunakan Tailwind via Play CDN
+        </span>
+
+        <ul class="list-disc block ml-4 mt-2 font-normal text-color1 text-xs">
+            <li class="leading-lh">Tambahkan tag script yang sudah di siapkan oleh tailwindcss dalam tag Head di HTML anda
+                <span class="block my-2 font-bold">
+                    &lt;script src="https://cdn.tailwindcss.com"&gt;
+                </span>
+                </li>
+                <br>
+        </ul>
     </div>
 
+    <h2 class="text-color4 font-light text-lg block text-center mt-10 tracking-normal">Responsive TailwindCSS</h2>
+    <!-- content -->
+    <div class="card mt-3 w-11/12 mx-auto rounded-md px-5 py-5">
+        <ul class="list-disc block ml-4 mt-2 font-normal text-color4 text-xs">
+            <li class="leading-LH">
+                Pertama, pastikan Anda sudah menambahkan 
+                <u>tag meta viewport</u> di dalam tag <u>head</u>, seperti dibawah ini
+                <br>
+                <span class="font-semibold block mt-1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span>
+            </li>
+            <li>
+                <table>
+                    <thead>
+                        <tr>
+                            <th> Breakpoints </th>
+                            <th> Minimum Width </th>
+                            <th> Output Css </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>sm</td>
+                            <td>640px</td>
+                            <td>@media (min-width: 640px) {...}</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td>md</td>
+                            <td>768px</td>
+                            <td>@media (min-width:768){...}</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td>lg</td>
+                            <td>1024px</td>
+                            <td>@media (min-width:1024){...}</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td>xl</td>
+                            <td>1280px</td>
+                            <td>@media (min-width:1280){...}</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td>2xl</td>
+                            <td>1536px</td>
+                            <td>@media (min-width:1536){...}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <br>
+        </ul>
+
+    </div>
+    
 </body>
 </html>
